@@ -1,4 +1,4 @@
-.title_section {
+.title-section {
   background-color: #ff4c68;
   color: #fff;
 }
@@ -8,7 +8,7 @@ body {
 }
 
 .container-fluid {
-  padding: 3% 15%
+  padding: 3% 15% 7%;
 }
 
 h1 {
@@ -66,14 +66,19 @@ p {
 /* Title image */
 
 .title-image {
-  width: 60%;
+  position: absolute;
+  right: 30%;
   transform: rotate(25deg);
+  width: 60%;
 }
 
 /* Features section */
 
 .features-section {
+  background-color: #fff;
   padding: 7% 15%;
+  position: relative;
+  z-index: 1;
 }
 
 .feature-box {
@@ -95,7 +100,6 @@ p {
 .testimonials-section {
   background-color: #ef8172;
   color: #fff;
-  padding: 7% 15%;
   text-align: center;
 }
 
@@ -103,6 +107,10 @@ p {
   width: 10%;
   border-radius: 100%;
   margin: 20px;
+}
+
+.carousel-item{
+  padding: 7% 15%;
 }
 
 /* Press section */
@@ -117,4 +125,49 @@ p {
 .press-image {
   width: 15%;
   margin: 20px 20px 50px;
+}
+
+/* Pricing section */
+
+.pricing-section {
+  padding: 100px;
+  text-align: center;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+/* Call to action */
+
+.cta-section {
+  background-color: #ff4c68;
+  color: #fff;
+  padding: 7% 15%;
+  text-align: center;
+}
+
+/* Footer */
+
+.footer-section {
+  background-color: #fff;
+  text-align: center;
+  padding: 7% 15%;
+}
+
+.footer-icon {
+  padding: 20px 10px;
+}
+
+/* Media tags */
+
+@media (max-width: 1028px) {
+  .title-section {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
 }
