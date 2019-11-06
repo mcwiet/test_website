@@ -1,13 +1,25 @@
 var numDrums = document.querySelectorAll(".drum").length;
 
 document.addEventListener("keydown", function (e) {
-  playSound(e.code[3].toLowerCase());
+  playSound(e.key);
+  animateButton(e.key);
 });
 
 for (var i = 0; i < numDrums; ++i){
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     playSound(this.innerHTML);
+    animateButton(this.innerHTML);
   });
+}
+
+function animateButton(letter){
+  var activeButton =  document.querySelector("." + letter);
+
+  activeButton.classList.add("pressed");
+
+  setTimeout( function() {
+    activeButton.classList.remove("pressed");
+  }, 100);
 }
 
 function playSound(letter){
